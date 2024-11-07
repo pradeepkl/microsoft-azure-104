@@ -1,94 +1,103 @@
-# Azure AD Beginner to Intermediate Learning Plan
+# AZ-104 Microsoft Azure Administrator Study Guide
 
-## Overview
-This is a one-week learning plan for Azure Active Directory (Azure AD), designed for 4 hours of study per day. The plan covers core Azure AD concepts, user and group management, security, integration, and best practices, providing a solid foundation in Azure AD administration.
-
----
-
-### **Day 1: Core Azure AD Concepts and Initial Setup**
-- **Azure AD Overview** (30 mins): Understanding Azure AD fundamentals, differences from traditional AD, and key benefits.
-- **Licensing** (30 mins): Overview of Azure AD Free, P1, and P2 licenses.
-- **User and Group Creation** (60 mins): 
-  - Hands-on: Add cloud-only users, manage user attributes, and set up basic groups.
-  - Create dynamic groups and set up sample dynamic memberships.
-- **Azure AD Connect Overview** (30 mins): Introduction to hybrid identity, AD Connect, and identity synchronization basics.
-- **Lab** (90 mins): Set up a test tenant, create users, configure dynamic groups, and explore Azure AD Connect options.
+Welcome to the **AZ-104 Study Guide** repository! This repo provides a structured study plan, resources, and hands-on labs to help you prepare for the **Microsoft AZ-104: Microsoft Azure Administrator** certification exam. Each module aligns with the core AZ-104 exam objectives, covering essential Azure services and skills for managing and administering Azure environments.
 
 ---
 
-### **Day 2: External Collaboration and Access Controls**
-- **Guest Users and Azure AD B2B** (45 mins): Explore B2B capabilities, inviting guest users, and configuring collaboration settings.
-- **Self-Service Password Reset (SSPR)** (30 mins): Enable SSPR and review configuration options.
-- **Multi-Factor Authentication (MFA)** (60 mins):
-  - Enable and configure MFA for specific users and groups.
-  - Configure authentication methods (phone, email, authenticator app).
-- **Lab** (105 mins): 
-  - Invite guest users, configure guest access restrictions, and test SSPR and MFA.
-  - Explore SSPR options and troubleshoot MFA scenarios.
+## Repository Structure
+
+The repository is organized into folders for each key module in the AZ-104 curriculum. Each module includes:
+- **README.md**: A 1-day, 4-hour study plan outlining key topics and learning objectives.
+- **labs/**: Step-by-step hands-on labs for practical learning.
+- **resources/**: Additional reference materials, cheat sheets, and links for further reading.
+
+### Folder Structure
+
+```plaintext
+az-104-study-guide/
+│
+├── README.md                 # Main repository overview and structure
+│
+├── identities-governance/
+│   ├── README.md             # Study plan and lab guide for identities and governance
+│   ├── labs/                 # Hands-on lab exercises for identity management and governance
+│   └── resources/            # Additional resources for further learning
+│
+├── storage/
+│   ├── README.md             # Study plan and lab guide for storage
+│   ├── labs/                 # Hands-on lab exercises for storage management
+│   └── resources/            # Additional storage resources
+│
+├── compute/
+│   ├── README.md             # Study plan and lab guide for compute resources
+│   ├── labs/                 # Hands-on lab exercises for VMs, containers, and scaling
+│   └── resources/            # Additional resources for compute topics
+│
+├── networking/
+│   ├── README.md             # Study plan and lab guide for networking
+│   ├── labs/                 # Hands-on lab exercises for virtual networks, VPNs, and security groups
+│   └── resources/            # Additional networking resources
+│
+└── monitoring-backup/
+    ├── README.md             # Study plan and lab guide for monitoring and backup
+    ├── labs/                 # Hands-on lab exercises for monitoring and backup solutions
+    └── resources/            # Additional resources for monitoring and backup
+```
+
+### Modules Overview
+
+| Module                     | Description                                                                              | Link to Module |
+|----------------------------|------------------------------------------------------------------------------------------|----------------|
+| **Identities and Governance**  | Manage Azure AD, RBAC, policies, and compliance for secure identity and governance.       | [Identities and Governance](./identities-governance/README.md) |
+| **Storage**                    | Configure and manage Azure storage accounts, blob storage, file shares, and backups.     | [Storage](./storage/README.md) |
+| **Compute**                    | Deploy and manage VMs, scale sets, and container services for applications and workloads. | [Compute](./compute/README.md) |
+| **Networking**                 | Set up and manage virtual networks, VPNs, ExpressRoute, and network security.            | [Networking](./networking/README.md) |
+| **Monitoring and Backup**      | Implement monitoring, logging, backups, and disaster recovery for Azure resources.       | [Monitoring and Backup](./monitoring-backup/README.md) |
 
 ---
 
-### **Day 3: Conditional Access and Identity Protection**
-- **Conditional Access Overview** (45 mins): Introduction to Conditional Access policies, use cases, and planning.
-- **Creating Policies** (75 mins): 
-  - Set up policies based on user, device, location, and app conditions.
-  - Require MFA, block risky sign-ins, and limit access by location.
-- **Identity Protection Essentials** (45 mins): Configure risk policies for risky sign-ins and risky users.
-- **Lab** (75 mins): 
-  - Create and test Conditional Access policies.
-  - Enable Identity Protection and test configurations for user and sign-in risk policies.
+## Getting Started
+
+1. **Choose a Module**: Each module covers a specific area of Azure. You can follow the recommended study sequence or dive into any module that interests you.
+2. **Review the Study Plan**: Each module README provides a 1-day, 4-hour study plan covering key concepts.
+3. **Complete the Labs**: Practical labs are included in each module's `labs/` folder. Follow the instructions to get hands-on experience.
+4. **Explore Additional Resources**: Each `resources/` folder contains documentation links, reference materials, and tips for deeper learning.
 
 ---
 
-### **Day 4: Role-Based Access Control (RBAC) and Privileged Identity Management (PIM)**
-- **RBAC Overview** (30 mins): Learn about built-in roles, custom roles, and how to assign roles at tenant and resource levels.
-- **Role Assignment and Custom Roles** (60 mins): 
-  - Apply least privilege.
-  - Create a custom role and assign it.
-- **Privileged Identity Management (PIM) Introduction** (45 mins): Configure PIM for just-in-time access for sensitive roles.
-- **Administrative Units (AUs)** (30 mins): Learn to create AUs to organize users and delegate permissions.
-- **Lab** (75 mins): 
-  - Assign roles, create custom roles, configure PIM, and manage role activations.
-  - Create AUs, assign administrative roles within AUs, and test scoped access limitations.
+## Recommended Study Sequence
+
+1. [Identities and Governance](./identities-governance/README.md)
+2. [Storage](./storage/README.md)
+3. [Compute](./compute/README.md)
+4. [Networking](./networking/README.md)
+5. [Monitoring and Backup](./monitoring-backup/README.md)
 
 ---
 
-### **Day 5: Application Integration and Single Sign-On (SSO)**
-- **Enterprise Application Basics** (30 mins): Overview of SaaS integration and SSO with Azure AD.
-- **Adding and Configuring Applications** (60 mins): Set up applications, explore API permissions, and assign users.
-- **Single Sign-On (SSO) Configurations** (45 mins): 
-  - Set up SSO with password-based, SAML, and OpenID Connect.
-  - Explore SSO settings and permissions.
-- **Azure AD Application Proxy** (45 mins): Introduction to Application Proxy for secure access to on-premises applications.
-- **Lab** (60 mins): 
-  - Integrate a SaaS app with SSO, configure permissions, and test user access.
-  - Set up an Application Proxy and secure with Azure AD pre-authentication.
+## Prerequisites
+
+- **Microsoft Azure Account**: You'll need an active Azure account for completing the labs. If you don’t have one, you can create a free account at [Azure Free Account](https://azure.microsoft.com/free/).
+- **Basic Knowledge of Azure**: Familiarity with the Azure portal and basic cloud concepts is recommended but not required.
 
 ---
 
-### **Day 6: Monitoring, Alerts, and Compliance Auditing**
-- **Audit Logs and Sign-In Logs** (45 mins): Explore Azure AD’s logging options.
-- **Alerting and Monitoring with Azure Monitor** (45 mins): Set up alerts for critical events like failed sign-ins.
-- **Access Reviews and Identity Governance** (60 mins): 
-  - Set up access reviews for groups and applications.
-  - Use Identity Governance for lifecycle and compliance management.
-- **Lab** (90 mins): 
-  - Configure alerts, view audit logs, set up access reviews, and test lifecycle management settings.
+## Helpful Resources
+
+- **Microsoft Learn**: Explore official learning paths for Azure Administrator skills at [Microsoft Learn - AZ-104](https://docs.microsoft.com/en-us/learn/certifications/exams/az-104).
+- **Azure Documentation**: Refer to [Azure Documentation](https://docs.microsoft.com/en-us/azure/) for in-depth guides and tutorials on each Azure service.
+- **AZ-104 Exam Skills Outline**: Review the official [AZ-104 Exam Outline](https://docs.microsoft.com/en-us/certifications/exams/az-104) to see a detailed breakdown of the topics covered.
 
 ---
 
-### **Day 7: Managed Identities, Best Practices, and Wrap-Up**
-- **Managed Identities Overview** (30 mins): Introduction to system-assigned and user-assigned managed identities.
-- **Configuring Managed Identities** (45 mins): Configure and use managed identities with services like Azure Key Vault.
-- **Security Best Practices** (60 mins): Review key security recommendations:
-  - Least privilege, MFA, Conditional Access policies, and guest access management.
-- **Final Lab and Review** (105 mins): 
-  - Practice setting up managed identities, securing apps with Key Vault, and reviewing key concepts.
-  - Summary and additional resources for continued learning.
+## Contributing
+
+If you have suggestions, corrections, or additional resources, feel free to open an issue or submit a pull request!
+
+## License
+
+This repository is licensed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 ---
 
-## Additional Resources
-- **Microsoft Learn**: Explore learning paths on Azure AD.
-- **Azure Documentation**: Detailed guides on each feature.
-- **Microsoft Docs Labs**: Practice hands-on with Azure-provided labs.
+Happy studying, and best of luck on your journey to becoming an **Azure Administrator**!
