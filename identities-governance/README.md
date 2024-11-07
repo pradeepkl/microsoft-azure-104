@@ -4,7 +4,7 @@ This module covers **Azure Identity and Governance** services, focusing on Azure
 
 ---
 
-## Weekly Study Plan (4 Hours per Day)
+## 10-Day Study Plan (4 Hours per Day)
 
 ### Day 1: Azure Active Directory Overview and User Management
 - **Topics Covered**:
@@ -127,6 +127,54 @@ This module covers **Azure Identity and Governance** services, focusing on Azure
 
 ---
 
+### Day 8: Azure AD Security Best Practices
+- **Topics Covered**:
+  - Identity Protection policies in Azure AD.
+  - Enforcing MFA for privileged accounts and passwordless authentication.
+- **Objectives**:
+  - Configure Identity Protection and enhance account security with MFA and passwordless options.
+- **Study Tasks**:
+  - **Reading**:
+    - [Identity Protection Overview](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview)
+    - [Passwordless Authentication Options](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-authentication-passwordless)
+  - **Lab**:
+    - Set up Identity Protection policies for risky sign-ins.
+    - Enable MFA for admin accounts and configure passwordless authentication for a test user.
+
+---
+
+### Day 9: Azure AD Management with PowerShell and CLI
+- **Topics Covered**:
+  - Managing Azure AD users and roles with PowerShell and Azure CLI.
+  - Automating tasks with scripts.
+- **Objectives**:
+  - Use PowerShell and CLI for automated Azure AD management.
+- **Study Tasks**:
+  - **Reading**:
+    - [Azure AD PowerShell Documentation](https://learn.microsoft.com/en-us/powershell/azure/active-directory/overview?view=azureadps-2.0)
+    - [Azure CLI for Azure AD](https://learn.microsoft.com/en-us/cli/azure/ad?view=azure-cli-latest)
+  - **Lab**:
+    - Use PowerShell and CLI to manage users and groups.
+    - Automate bulk user creation and role assignments.
+
+---
+
+### Day 10: Azure AD Audit Logs and Monitoring
+- **Topics Covered**:
+  - Azure AD sign-in and audit logs.
+  - Configuring alerts and monitoring for identity activities.
+- **Objectives**:
+  - Set up monitoring for security and compliance.
+- **Study Tasks**:
+  - **Reading**:
+    - [Azure AD Audit Logs](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/concept-audit-logs)
+    - [Azure Monitor Overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+  - **Lab**:
+    - View and analyze sign-in and audit logs.
+    - Set up alerts for risky sign-ins and track activity with Log Analytics.
+
+---
+
 ## Additional Resources
 
 - **Microsoft Learn Paths**:
@@ -136,6 +184,6 @@ This module covers **Azure Identity and Governance** services, focusing on Azure
 
 ---
 
-This module covers foundational and intermediate concepts of Azure identity and governance, preparing you to confidently manage identity, access, and compliance on Azure. Follow each day’s study plan and complete the labs to solidify your understanding.
+This module provides a comprehensive foundation for Azure identity and governance, essential for the AZ-104 exam and real-world Azure administration. Follow each day’s study plan and complete the labs to solidify your understanding.
 
 Happy studying!
