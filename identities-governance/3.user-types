@@ -1,0 +1,59 @@
+# Types of Users in Azure Entra ID
+
+Azure Entra ID (formerly Azure Active Directory) supports various user types, each suited for different roles and scenarios. Below is a list of user types and their typical use cases:
+
+## 1. Member Users
+   - **Description**: Internal users who are part of the organization’s Azure Entra ID tenant.
+   - **Use Cases**:  
+     - Used for employees needing access to internal applications, Microsoft 365, Azure resources, and corporate services.
+     - Essential for setting up internal roles and permissions, securing access to organizational resources.
+
+## 2. Guest Users (B2B Collaboration Users)
+   - **Description**: External users, such as partners or contractors, invited into the Azure Entra ID tenant for collaboration.
+   - **Use Cases**:  
+     - Enables secure Business-to-Business (B2B) collaboration, providing limited access to specific resources.
+     - Commonly used for partner and vendor access to collaboration tools like Microsoft Teams and SharePoint.
+
+## 3. B2C Users (Business-to-Consumer)
+   - **Description**: External, consumer-facing users managed through Azure Entra ID B2C, a service for customer identity.
+   - **Use Cases**:  
+     - For applications that require identity management for external customers, such as retail or healthcare platforms.
+     - Provides customizable identity experiences, supporting self-registration, social logins, and scalable user management.
+
+## 4. Managed Identities (System-Assigned and User-Assigned)
+   - **Description**: Service identities managed by Azure Entra ID, used for secure authentication of Azure resources.
+   - **Use Cases**:  
+     - Applications, virtual machines, and services that need access to other Azure services without credential management.
+     - **System-assigned identities** are specific to a resource, while **user-assigned identities** can be reused across multiple resources.
+
+## 5. Directory Synchronization Users (Synced Users)
+   - **Description**: Users synchronized from an on-premises Active Directory to Azure Entra ID using Azure AD Connect.
+   - **Use Cases**:  
+     - Provides seamless access across on-premises and cloud resources, suitable for hybrid environments.
+     - Supports single sign-on (SSO) for users, offering a unified experience across both on-premises and cloud environments.
+
+## 6. Federated Users
+   - **Description**: Users authenticated via an external identity provider (e.g., AD FS) rather than directly through Azure Entra ID.
+   - **Use Cases**:  
+     - For organizations preferring local authentication control while accessing cloud resources.
+     - Useful in enterprises with specific compliance or control requirements over authentication.
+
+## 7. Application Users (Service Principals)
+   - **Description**: Identities created for applications or services to authenticate securely within Azure Entra ID.
+   - **Use Cases**:  
+     - Common in DevOps and automation scenarios, enabling applications and services to access resources with specific permissions.
+     - Allows for granular permission control based on the least privilege principle.
+
+## Summary Table
+
+| **User Type**                  | **Description**                                                                                                     | **Common Use Cases**                                                                                         |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| **Member Users**               | Internal users belonging to the organization’s Azure Entra ID tenant.                                               | Employee access to internal resources, Microsoft 365, and Azure resources.                                  |
+| **Guest Users (B2B)**          | External users invited into the tenant for collaboration.                                                           | Partner and vendor access to collaboration tools like Teams or SharePoint.                                   |
+| **B2C Users**                  | Customer-facing users managed through Azure Entra ID B2C.                                                           | Public access to customer-facing apps or websites, supports social login options.                            |
+| **Managed Identities**         | System or user-assigned identities for Azure resources, eliminating credential management.                          | Application access to Azure resources, secure app-to-service communication.                                  |
+| **Directory Sync Users**       | Users synchronized from on-premises AD for hybrid identity management.                                              | Hybrid access for on-premises and cloud resources, single sign-on across environments.                       |
+| **Federated Users**            | Identities authenticated via an external provider, like AD FS.                                                      | Organizations needing local authentication control while accessing cloud resources.                          |
+| **Application Users**          | Service principals or app identities created for secure application authentication.                                 | DevOps automation, app integrations, secure access for services.                                             |
+
+These user types in Azure Entra ID allow flexible identity management for internal employees, external partners, customers, and services, supporting a range of scenarios across cloud and hybrid environments.
