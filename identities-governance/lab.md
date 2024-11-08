@@ -12,6 +12,7 @@
 9. [Application Registration and Single Sign-On (SSO) Setup](#9-application-registration-and-single-sign-on-sso-setup)
 10. [Federated User Setup](#10-federated-user-setup)
 11. [Using Managed Identities for Azure Resources](#11-using-managed-identities-for-azure-resources)
+12. [Configuring Password Policy in Azure Entra ID](#12-configuring-password-policy-in-azure-entra-id)
 
 ---
 
@@ -147,6 +148,55 @@
 2. Under **Settings**, select **Identity** and enable **System-assigned managed identity**.
 3. In the target resource (e.g., **Key Vault**), grant access to the managed identity.
 4. The application can now securely access resources using the managed identity without explicit credentials.
+
+---
+
+## 12. Configuring Password Policy in Azure Entra ID
+
+**Objective**: Configure password policies in Azure Entra ID to enforce security requirements such as password length, complexity, and expiration.
+
+### Lab Steps
+
+1. **Log in to Azure Portal**
+   - Go to [https://portal.azure.com](https://portal.azure.com) and log in with your administrator credentials.
+
+2. **Navigate to Azure Active Directory** 
+   - In the left sidebar, select **Azure Active Directory**.
+
+3. **Access Security Settings**
+   - Under **Security**, click on **Authentication methods**.
+   - Select **Password protection** to view and configure password policies.
+
+4. **Configure Password Policy Settings**
+   - Under **Password protection settings**, review and adjust the following options:
+     - **Lockout threshold**: Define the number of failed sign-in attempts before an account is locked.
+     - **Lockout duration (seconds)**: Set the duration for which the account remains locked after exceeding the threshold.
+   - Click **Save** after making changes.
+
+5. **Set Password Complexity and Minimum Length Requirements (for Azure AD Cloud Only)**
+   - Unfortunately, Azure Entra ID only enforces a built-in password policy for cloud-only accounts:
+     - **Minimum Password Length**: 8 characters.
+     - **Complexity Requirements**: Passwords must include three out of four character types (uppercase letters, lowercase letters, numbers, and symbols).
+   - These default requirements apply automatically and cannot be modified further.
+
+6. **Set Password Expiration (if applicable)**
+   - **Note**: For cloud-only users, passwords do not expire by default. To change this setting:
+     - Go to **Azure Active Directory** > **Users**.
+     - Select **Password reset** > **Properties**.
+     - Enable **Self-service password reset** if not already enabled.
+     - Click on **Password expiration policy**.
+     - Set the desired **Number of days until password expires** and **Days before expiration to notify users**.
+     - Click **Save**.
+
+7. **Enforcing Password Policies in a Hybrid Environment (Optional)**
+   - If your environment includes on-premises Active Directory and you’ve configured Azure AD Connect, you can synchronize on-premises password policies to Azure Entra ID.
+   - In this case, your on-premises Active Directory password policies (set in Group Policy) will apply to synchronized users in Azure Entra ID.
+
+8. **Testing the Policy**
+   - Inform users about the updated password policy settings.
+   - Have a test user try changing their password to verify that the policy is enforced as expected.
+
+> **Note**: Password protection in Azure Entra ID also includes protection against commonly used or easily guessed passwords through banned password lists.
 
 ---
 
