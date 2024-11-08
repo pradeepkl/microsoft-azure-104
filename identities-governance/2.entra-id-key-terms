@@ -1,0 +1,21 @@
+# Key Terms in Azure Entra ID
+
+- **Identity**: A digital representation of a user, application, or device that can be authenticated and authorized to access resources in Azure.
+
+- **Account**: An identity with access to Azure resources, linked to credentials and associated roles and permissions.
+
+- **Microsoft Entra Account**: A unique account managed by Azure Entra ID, which provides access to Microsoft cloud services and applications.
+
+- **Account Administrator**: A legacy role that grants full access to billing and account management tasks, typically at the subscription level in Azure.
+
+- **Service Administrator**: A role with full management permissions over all Azure resources in a subscription, enabling configuration and monitoring.
+
+- **Owner**: A role within a specific Azure resource or resource group, providing complete permissions for managing and delegating access to that resource.
+
+- **Azure Subscription**: A unit of management within Azure that groups resources and defines quotas, billing, and permissions for users and services.
+
+- **Tenant**: An instance of Azure Entra ID dedicated to an organization, which contains users, groups, applications, and policies unique to that entity.
+
+- **Single Tenant**: An Azure Entra ID configuration where resources are restricted to users within one organization or tenant.
+
+- **Multi-Tenant**: An Azure Entra ID configuration where an application or resource can be accessed by users across multiple organizations or tenants.
