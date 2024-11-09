@@ -168,6 +168,34 @@ By the end of this module, you should be able to:
 3. **Verify the VM Size**:
    - Go to the **Overview** tab to confirm the updated VM size.
 
+---  
+
+### Lab 5: Create an Image from an Existing VM
+
+**Objective**: Create an image from a configured VM to use as a template for deploying other VMs with the same settings.
+
+#### Steps
+1. **Prepare the VM for Image Creation**:
+   - Connect to the VM and perform any configuration needed (e.g., install software, set up environment variables).
+   - Once configuration is complete, **stop** the VM in the Azure Portal to prepare it for imaging.
+
+2. **Capture the Image**:
+   - In the Azure Portal, go to **Virtual Machines** and select the VM you want to image.
+   - In the VM's menu, select **Capture**.
+   - Enter an **Image Name** (e.g., `MyLinuxVMImage`).
+   - Choose the **Resource Group** where the image will be stored.
+   - Under **Automatically delete this virtual machine after creating the image**, select **Yes** if you don’t need the original VM anymore.
+   - Click **Review + Create**, then **Create** to capture the VM image.
+
+3. **Verify Image Creation**:
+   - Once the process completes, go to **Images** in the Azure Portal to verify that your image is listed.
+
+4. **Deploy a VM from the Image**:
+   - To create a new VM from the image, go to **Images** in the Azure Portal.
+   - Select the image you created, and click **+ Create VM**.
+   - Follow the VM creation steps, but use the custom image as the base for your new VM.
+
+
 ---
 
 ## Additional Resources
