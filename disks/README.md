@@ -134,5 +134,48 @@ Copy code
 echo "/dev/sdc1 /mnt/mydisk ext4 defaults 0 0" | sudo tee -a /etc/fstab
 This command ensures that the disk is automatically mounted after a reboot by adding an entry to /etc/fstab.
 
+Additional Scenarios
+Scenario 1: Disk Performance Testing
+Install Performance Tool (Linux):
+
+bash
+Copy code
+sudo apt-get install fio -y
+Run Performance Test:
+
+bash
+Copy code
+fio --name=test --filename=/mnt/mydisk/testfile --size=1G --time_based --runtime=60 --rw=randwrite --bs=4k --ioengine=libaio --direct=1 --numjobs=1 --iodepth=32
+Scenario 2: Resizing a Managed Disk
+Resize Disk:
+bash
+Copy code
+az disk update --resource-group <YourResourceGroup> --name <YourDiskName> --size-gb <NewSize>
+Scenario 3: Disk Replication Between Regions
+Enable Replication:
+bash
+Copy code
+az disk replication create --resource-group <YourResourceGroup> --source <YourDiskName> --replication-region <TargetRegion>
+Scenario 4: Automated Snapshots
+Create Snapshot Using CLI:
+
+bash
+Copy code
+az snapshot create --resource-group <YourResourceGroup> --source <YourDiskName> --name <YourSnapshotName>
+Automation: Use Azure Automation or Azure Logic Apps to schedule snapshots automatically.
+
+Cleaning Up Resources
+Detach and Delete Disks:
+
+bash
+Copy code
+az vm disk detach --resource-group <YourResourceGroup> --vm-name <YourVMName> --name <YourDiskName>
+az disk delete --resource-group <YourResourceGroup> --name <YourDiskName> --yes
+Delete Snapshots:
+
+bash
+Copy code
+az snapshot delete --resource-group <YourResourceGroup> --name <YourSnapshotName>
+
 
    
